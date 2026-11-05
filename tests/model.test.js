@@ -1,0 +1,11 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {energy,filterAircraft,validDesign} from '../dist/js/model.js';
+test('search trims and ignores case',()=>assert.equal(filterAircraft(' AURORA ')[0].id,'aurora'));
+test('search intersects mission and reset restores four',()=>{assert.equal(filterAircraft('Aurora','Cargo').length,0);assert.equal(filterAircraft().length,4);});
+test('known solar and battery example',()=>{const r=energy({battery:100,charge:50,sun:100,area:50,demand:51});assert.equal(r.solar,11);assert.equal(r.available,40);assert.equal(r.hours,1);});
+test('darkness increases battery demand',()=>assert.equal(energy({battery:100,charge:100,sun:0,area:50,demand:40}).hours,2));
+test('empty battery provides zero endurance',()=>assert.equal(energy({battery:100,charge:0,sun:50,area:50,demand:40}).hours,0));
+test('invalid input rejected',()=>{for(const charge of [-1,101,NaN])assert.throws(()=>energy({battery:100,charge,sun:50,area:50,demand:40}),RangeError);});
+test('zero net draw is not claimed as infinite endurance',()=>assert.equal(energy({battery:100,charge:50,sun:100,area:100,demand:22}).hours,null));
+test('storage values are allowlisted',()=>{assert.equal(validDesign({model:'aurora',finish:'pearl',cabin:'quiet'}),true);for(const d of [null,{}, {model:'aurora',finish:'__proto__',cabin:'quiet'}])assert.equal(validDesign(d),false);});

@@ -1,0 +1,70 @@
+# Based on GitHub's official custom Pages workflow documentation.
+name: Publish Raj Solara
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out project
+        uses: actions/checkout@v6
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Run logic tests
+        run: npm test
+      - name: Configure Pages
+        id: pages
+        uses: actions/configure-pages@v5
+      - name: Prepare website and nested-page recovery
+        env:
+          SITE_BASE: ${{ steps.pages.outputs.base_path }}
+        run: |
+          python3 - <<'PY'
+          import os
+          import shutil
+          from pathlib import Path
+
+          # Patch the deployment copy only: local development keeps root paths.
+          base = os.environ['SITE_BASE'].rstrip('/') + '/'
+          assert base.startswith('/') and '"' not in base and "'" not in base
+          shutil.copytree('dist', '_site')
+          page = Path('_site/404.html')
+          text = page.read_text()
+          for old, new in [('href="/css/', f'href="{base}css/'),
+                           ('src="/js/', f'src="{base}js/'),
+                           ('href="/"', f'href="{base}"')]:
+              assert old in text, f'Expected recovery path missing: {old}'
+              text = text.replace(old, new)
+          page.write_text(text)
+          script = Path('_site/js/recovery.js')
+          text = script.read_text()
+          assert "const HOME='/';" in text
+          script.write_text(text.replace("const HOME='/';", f"const HOME='{base}';"))
+          Path('_site/.nojekyll').touch()
+          assert Path('_site/index.html').exists()
+          PY
+      - name: Upload website
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+      - name: Deploy website
+        id: deployment
+        uses: actions/deploy-pages@v4

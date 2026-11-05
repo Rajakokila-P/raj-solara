@@ -82,3 +82,7 @@ Visible branding, page titles, downloaded brief heading/filename and documentati
 ## Brand-symbol revision — 5 November 2026
 
 Static checks confirmed two matching decorative SVG marks beside the header/footer name and no change to navigation destinations. Visual checking of this new symbol in the installed site remains pending.
+
+## Fresh source-validation run — 5 November 2026
+
+The [validation record](validation.md) supersedes earlier statements that official validation is unattempted. All three HTML pages have zero errors/warnings after correction; CSS has zero errors and 101 retained warnings; ESLint has zero findings; 13 unit tests pass. No new full browser or accessibility pass is claimed.

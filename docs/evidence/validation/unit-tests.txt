@@ -1,0 +1,26 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> raj-solara@1.0.0 test
+> node --test tests/*.test.js
+
+✔ search trims and ignores case (0.960488ms)
+✔ search intersects mission and reset restores four (0.146982ms)
+✔ known solar and battery example (0.210687ms)
+✔ darkness increases battery demand (0.136346ms)
+✔ empty battery provides zero endurance (0.164458ms)
+✔ invalid input rejected (0.460994ms)
+✔ zero net draw is not claimed as infinite endurance (0.20559ms)
+✔ storage values are allowlisted (0.165049ms)
+✔ dark day reaches 20% reserve at hour eight (0.9025ms)
+✔ empty battery does not invent reserve energy (0.142885ms)
+✔ surplus remains capped at capacity (0.17227ms)
+✔ invalid cycle inputs rejected (0.389497ms)
+✔ scenario responses distinguish sensor and connection failures (0.389547ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 89.837216

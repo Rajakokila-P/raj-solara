@@ -1,0 +1,16 @@
+{
+  "checked_at_utc": "2026-11-05T15:25:56.962200+00:00",
+  "base_commit": "b99bbb9dfd2e4a9b5bc1a66757d95acb34c332e4",
+  "files": {
+    "dist/404.html": "cfee8e0b33c0babe6c6c69a7481247f42cdf83e5384afb450c7dc5213ebb9ebf",
+    "dist/about.html": "83053148560163161fbae2cf731ed9b55f9779cfe9b615fd1dfce1402ebe2ee7",
+    "dist/css/style.css": "9475fbcd46d04764ec3fe6b73b2fe2396e49715800f231535ca78adec9f1544d",
+    "dist/index.html": "bf1025d7d2c8e1c1ee347d5858eef9a44f4a314191a6cf0a45dcbbaa4a42c278",
+    "dist/js/app.js": "be36fff4c3f5039e78b7e115ca958bda686a699b7d6e0ce307ffa175a224cd53",
+    "dist/js/art.js": "ca69fef2ec11baff02c6ab4c5e3ea9351e19061ae87fd3cde9a8018e4aa6f30d",
+    "dist/js/model.js": "94425da59fe30857ea965b5f3d229f2dfc2630eb7a22bc027748e5001f21a64c",
+    "dist/js/recovery.js": "1ab5fd0bc1c3446eb424def680731a5cedc1c52c79832db2c7da0d54bccb2828",
+    "dist/js/systems-model.js": "8b6adf3bb3d63f97d68c9793bdcd2db0f37c435f3b3c65de84f765cc137b5e3c",
+    "dist/js/systems.js": "d5f0ecd751794382fcfb54f0249c5f8266a3def531056b9f568f46ffb8041d04"
+  }
+}

@@ -1,0 +1,175 @@
+[
+  {
+    "filePath": "dist/js/app.js",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "dist/js/art.js",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "dist/js/model.js",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "dist/js/recovery.js",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "dist/js/systems-model.js",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "dist/js/systems.js",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "eslint.config.js",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "scripts/serve.cjs",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "tests/browser-check.cjs",
+    "messages": [
+      {
+        "ruleId": "no-undef",
+        "severity": 2,
+        "message": "'document' is not defined.",
+        "line": 14,
+        "column": 234,
+        "messageId": "undef",
+        "endLine": 14,
+        "endColumn": 242
+      },
+      {
+        "ruleId": "no-undef",
+        "severity": 2,
+        "message": "'document' is not defined.",
+        "line": 15,
+        "column": 212,
+        "messageId": "undef",
+        "endLine": 15,
+        "endColumn": 220
+      },
+      {
+        "ruleId": "no-undef",
+        "severity": 2,
+        "message": "'document' is not defined.",
+        "line": 15,
+        "column": 429,
+        "messageId": "undef",
+        "endLine": 15,
+        "endColumn": 437
+      },
+      {
+        "ruleId": "no-undef",
+        "severity": 2,
+        "message": "'document' is not defined.",
+        "line": 19,
+        "column": 196,
+        "messageId": "undef",
+        "endLine": 19,
+        "endColumn": 204
+      },
+      {
+        "ruleId": "no-undef",
+        "severity": 2,
+        "message": "'innerWidth' is not defined.",
+        "line": 19,
+        "column": 234,
+        "messageId": "undef",
+        "endLine": 19,
+        "endColumn": 244
+      }
+    ],
+    "suppressedMessages": [],
+    "errorCount": 5,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "source": "// Optional integration checks: install Playwright separately, start the local server.\nconst {chromium}=require('playwright');\nconst assert=require('node:assert/strict');\n(async()=>{\nconst browser=await chromium.launch({headless:true,args:['--no-sandbox']});\nconst page=await browser.newPage({viewport:{width:1440,height:1000}});let errors=[];let results=[];\npage.on('pageerror',e=>errors.push(e.message));\nasync function check(name,fn){await fn();results.push(name);}\nawait page.goto('http://127.0.0.1:4174');\nawait check('Four aircraft and six system topics',async()=>{assert.equal(await page.locator('#cards article').count(),4);for(const key of ['solar','battery','autonomy','form','satellite','sensing']){await page.locator(`[data-topic=${key}]`).click();assert.ok((await page.locator('#topic').innerText()).length>80);}});\nawait check('Search, intersection and reset',async()=>{await page.locator('#search').fill(' BR101 ');assert.equal(await page.locator('#cards article').count(),1);await page.locator('#mission').selectOption('Cargo');assert.equal(await page.locator('#cards article').count(),0);await page.locator('#reset').click();assert.equal(await page.locator('#cards article').count(),4);});\nawait check('Comparison has a three-concept maximum',async()=>{for(const name of ['BR101','Aurora','Stratos','Courier'])await page.getByRole('button',{name:'Compare '+name,exact:true}).click();assert.match(await page.locator('#compare-status').innerText(),/limit/);assert.equal(await page.locator('#comparison tr').first().locator('th').count(),4);await page.locator('#clear').click();});\nawait check('Energy budget reserve and validation',async()=>{await page.locator('#cycle-charge').fill('70');await page.locator('#cycle-solar').fill('0');await page.locator('#cycle-demand').fill('10');await page.locator('#run-cycle').click();assert.match(await page.locator('#cycle-status').innerText(),/hour 8/);await page.locator('#cycle-charge').fill('101');await page.locator('#run-cycle').click();assert.match(await page.locator('#cycle-status').innerText(),/limits/);await page.locator('#cycle-charge').fill('80');await page.locator('#run-cycle').click();});\nawait check('Delayed success, cancellation and stale response protection',async()=>{await page.locator('#request-mission').click();assert.equal(await page.locator('#mission-progress').isVisible(),true);await page.waitForFunction(()=>document.getElementById('mission-status').textContent.includes('complete'));assert.match(await page.locator('#mission-result').innerText(),/Observation/);await page.locator('#request-mission').click();await page.locator('#cancel-mission').click();await page.waitForTimeout(1400);assert.match(await page.locator('#mission-status').innerText(),/cancelled/);assert.equal(await page.locator('#mission-result').innerText(),'');await page.locator('#request-mission').click();await page.locator('#mission-scenario').selectOption('obstacle');await page.waitForTimeout(1400);assert.match(await page.locator('#mission-status').innerText(),/Scenario changed/);});\nawait check('Failed satellite update and successful retry',async()=>{await page.locator('#mission-scenario').selectOption('offline');await page.locator('#request-mission').click();await page.waitForFunction(()=>document.getElementById('mission-status').textContent.includes('failed'));await page.locator('#mission-scenario').selectOption('obstacle');await page.locator('#request-mission').click();await page.waitForFunction(()=>document.getElementById('mission-status').textContent.includes('complete'));assert.match(await page.locator('#mission-result').innerText(),/obstacle/);});\nawait check('BR101 studio save, reload, reopen and delete',async()=>{await page.locator('#model').selectOption('br101');await page.locator('#finish').selectOption('ocean');await page.locator('#save').click();await page.reload();assert.match(await page.locator('#saved').innerText(),/BR101/);await page.getByRole('button',{name:'Open design 1',exact:true}).click();assert.equal(await page.locator('#finish').inputValue(),'ocean');await page.getByRole('button',{name:'Delete design 1',exact:true}).click();assert.match(await page.locator('#saved').innerText(),/No saved/);});\nawait check('Enquiry invalid and demonstration success',async()=>{await page.getByRole('button',{name:'Check enquiry'}).click();assert.match(await page.locator('#form-status').innerText(),/name/);await page.locator('#name').fill('Example Student');await page.locator('#email').fill('example@example.com');await page.locator('#message').fill('A concept for environmental research.');await page.getByRole('button',{name:'Check enquiry'}).click();assert.match(await page.locator('#form-status').innerText(),/nothing was sent/);});\nawait page.goto('http://127.0.0.1:4174');\nawait check('Desktop and mobile have no horizontal page overflow',async()=>{for(const width of [1440,390,320]){await page.setViewportSize({width,height:844});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);}});\nawait page.setViewportSize({width:390,height:844});\nassert.deepEqual(errors,[]);console.log(JSON.stringify({passed:results.length,results,pageErrors:errors},null,2));await browser.close();\n})().catch(e=>{console.error(e);process.exit(1)});\n",
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "tests/model.test.js",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "tests/systems.test.js",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  }
+]

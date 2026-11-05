@@ -99,3 +99,7 @@ Extract this archive into a new directory. Open the `raj-solara` folder in VS Co
 ## British-colour brand symbol
 
 A decorative three-line red, white and navy mark appears beside Raj Solara in the header and footer, inspired by the user-supplied British-flag light-trail reference. The white line has an outline for visibility. This is a colour motif, not a literal Union Jack. It uses inline SVG, requires no image download and is hidden from assistive technology because the adjacent name supplies the link text.
+
+## Code validation — 5 November 2026
+
+See [validation results and remaining warnings](docs/validation.md) for official HTML/CSS reports, ESLint configuration and reproducible commands. These results apply to the corrected local source; live deployment must be updated and rechecked.

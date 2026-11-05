@@ -80,7 +80,7 @@ BR101's 160 kWh capacity, 90 m² panel area and 30 kW default demand are **new i
 
 ### Evidence and credits
 
-The presentation's cover image is included unchanged at `dist/assets/br101-design-reference.png`, retaining its embedded Gemini Notebook mark. Its original assertions are not adopted as verified specifications. Concept direction and supplied presentation: Rajakokila-P. Implementation, additional explanations and tests: AI-assisted as disclosed above. The existing British-livery render remains an illustrative interpretation; it is not an engineering drawing or model-specific photograph.
+The presentation's cover image is included unchanged at `dist/assets/br101-design-reference.png`, retaining its embedded Gemini Notebook mark. Its original assertions are not adopted as verified specifications. Concept direction and supplied presentation: Rajakokila-P. Implementation, additional explanations and tests: The existing British-livery render remains an illustrative interpretation; it is not an engineering drawing or model-specific photograph.
 
 Thirteen Node tests passed after integration. Browser automation was attempted but Chromium could not launch in the execution environment, so browser results are not claimed. See the testing record for remaining checks.
 

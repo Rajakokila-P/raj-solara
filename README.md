@@ -2,6 +2,16 @@
 
 An interactive fictional solar-assisted aircraft concept studio, now featuring the user’s BR101 platform. Project owner: **Rajakokila-P**.
 
+Live site: https://rajakokila-p.github.io/raj-solara/
+
+## Visuals
+
+![Mobile studio at 390px, showing the finish and interior selectors](docs/evidence/mobile-studio.jpg)
+
+![Mobile gallery at 390px](docs/evidence/mobile-gallery.jpg)
+
+More screenshots and the browser checks behind them are in [browser evidence](docs/browser-evidence.md).
+
 ## Run locally
 
 On Windows, extract the archive and open `raj-solara/start-windows.bat`. Alternatively, with Node.js installed, open a terminal in the `raj-solara` folder and run:
@@ -16,11 +26,22 @@ Open http://127.0.0.1:4174. Keep the terminal running. If Node is not on your Wi
 & "C:\Program Files\nodejs\node.exe" scripts/serve.cjs
 ```
 
-No npm install, paid API, account or backend is required.
+Running the website needs no npm install, paid API, account or backend. Running the tests and lint needs `npm install` once (see Testing).
 
 ## Purpose and audience
 
 Aviation enthusiasts and students can explore fictional aircraft, compare design assumptions and see why sunlight alone does not establish an aircraft's feasibility. No operational aircraft, flight-control system or certified performance is represented.
+
+## Usage
+
+1. Open the studio and use the search box or mission filter to find an aircraft.
+2. Select up to three concepts to compare them. Filtering keeps your selections.
+3. Change the energy assumptions to see how endurance is calculated.
+4. Choose an aircraft, exterior finish and cabin concept, then download the brief.
+5. Save up to six configurations in your browser. Reopen or delete them from the saved list.
+6. Open the systems section to read about solar, storage, autonomy, curved wings, satellite communication and sensing.
+
+Saved designs are stored only in your browser. Clearing site data removes them.
 
 ## User stories
 
@@ -45,18 +66,44 @@ All aircraft figures are fictional educational inputs. Solar power uses 1 kW/m²
 
 ## Testing
 
-Run `npm test` or `node --test tests/*.test.js`. See [testing](docs/testing.md) for verified results and outstanding manual checks. Automated checks are not a claim of full accessibility or distinction.
+Run `npm install` once, then `npm test` or `node --test tests/*.test.js`. See [testing](docs/testing.md) for verified results and outstanding manual checks. Automated checks are not a claim of full accessibility or distinction.
 
 ## Deployment
 
-Publish the **contents of dist** at the root of a static host. Configure missing pages to use 404.html. For GitHub Pages, use a deployment workflow or branch that publishes dist contents; the repository root has no index.html. For a project URL such as /aether-solara/, update all four root-relative paths in 404.html and HOME in js/recovery.js to that exact base path. Test a nested missing URL, cancellation and timed recovery after publishing. Record the actual live URL, deployed commit/date and local/live equivalence in docs/testing.md. No deployment is claimed by this package.
+Publish the **contents of dist** at the root of a static host. Configure missing pages to use 404.html. For GitHub Pages, the source is GitHub Actions and the "Publish Raj Solara" workflow publishes the contents of dist; the repository root has no index.html. For a project URL such as /aether-solara/, update all four root-relative paths in 404.html and HOME in js/recovery.js to that exact base path. Test a nested missing URL, cancellation and timed recovery after publishing. Record the actual live URL, deployed commit/date and local/live equivalence in docs/testing.md.
 
 ## Git and ownership
 
-This archive has no .git directory and no fabricated history. No commits or co-author trailers have been created. Initialise your repository yourself and configure your own name and verified GitHub email. Commit your genuine work in focused steps; do not claim this generated starting package was independently developed over time. The Contributors display is controlled by GitHub's attribution of actual commits, not this README.
+The repository owner makes the commits. The history is visible with `git log`. Commits are made under the owner's own GitHub identity. The Contributors display is controlled by GitHub's attribution of actual commits, not this README.
 
+## Contributing
 
-## Assessment status
+This is a closed coursework project, so contributions are not being accepted. Bug reports and suggestions are welcome as GitHub issues.
+
+## Support
+
+For questions or problems, open an issue at https://github.com/Rajakokila-P/raj-solara/issues. Include the browser, the device width and the steps to reproduce the problem.
+
+## Roadmap
+
+- Complete the manual browser checks listed in [testing](docs/testing.md).
+- Resolve the licence status of the third-party images listed under Licence.
+- Reduce the remaining CSS validator warnings in batches, with a browser check after each batch.
+- Collect real user feedback and add it to the testing record.
+
+## Authors and acknowledgment
+
+- Concept direction and supplied BR101 presentation and pictures: Rajakokila-P.
+- Implementation, explanations and tests: Rajakokila-P, with AI assistance. The AI tools used are disclosed in the project declaration.
+- The BR101 cover image and supplied pictures are the owner's supplied material. Their licence status is still being confirmed (see Licence).
+
+## Licence
+
+The code, HTML, CSS, JavaScript, tests and original written documentation in this repository are licensed under the MIT Licence. See [LICENSE](LICENSE).
+
+The MIT Licence does not apply to third-party or supplied material. This includes the supplied BR101 presentation and the cover image `dist/assets/br101-design-reference.png`, which retains its embedded Gemini Notebook mark, and the supplied pictures `dist/assets/br101-vision.png`, `dist/assets/br202-silver.png`, `dist/assets/br202-cobalt.png` and `dist/assets/br303-pearl.png`. Their rights remain with their owners. Their licence status is still being confirmed. The generated aircraft render at `dist/assets/solara-british-aircraft.png` is not covered by the MIT Licence until its terms are confirmed.
+
+## Project status
 
 Working starting implementation, not a guaranteed grade. All pass and merit criteria must be met before distinction can be considered. Official W3C HTML/Jigsaw CSS validation, JS lint, real user feedback, personal reflection, browser/accessibility evidence and final deployment checks remain outstanding. See docs/design.md and docs/testing.md.
 
@@ -80,7 +127,7 @@ BR101's 160 kWh capacity, 90 m² panel area and 30 kW default demand are **new i
 
 ### Evidence and credits
 
-The presentation's cover image is included unchanged at `dist/assets/br101-design-reference.png`, retaining its embedded Gemini Notebook mark. Its original assertions are not adopted as verified specifications. Concept direction and supplied presentation: Rajakokila-P. Implementation, additional explanations and tests: The existing British-livery render remains an illustrative interpretation; it is not an engineering drawing or model-specific photograph.
+The presentation's cover image is included unchanged at `dist/assets/br101-design-reference.png`, retaining its embedded Gemini Notebook mark. Its original assertions are not adopted as verified specifications. Concept direction and supplied presentation: Rajakokila-P. Implementation, additional explanations and tests: AI-assisted, as disclosed in the project declaration. The existing British-livery render remains an illustrative interpretation; it is not an engineering drawing or model-specific photograph.
 
 Thirteen Node tests passed after integration. Browser automation was attempted but Chromium could not launch in the execution environment, so browser results are not claimed. See the testing record for remaining checks.
 

@@ -94,7 +94,7 @@ For questions or problems, open an issue at https://github.com/Rajakokila-P/raj-
 ## Authors and acknowledgment
 
 - Concept direction and supplied BR101 presentation and pictures: Rajakokila-P.
-- Implementation, explanations and tests: Rajakokila-P, with AI assistance. The AI tools used are disclosed in the project declaration.
+- Implementation, explanations and tests: Rajakokila-P. through the research in the project declaration.
 - The BR101 cover image and supplied pictures are the owner's supplied material. Their licence status is still being confirmed (see Licence).
 
 ## Licence

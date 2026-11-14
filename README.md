@@ -127,9 +127,34 @@ BR101's 160 kWh capacity, 90 m² panel area and 30 kW default demand are **new i
 
 ### Evidence and credits
 
-The presentation's cover image is included unchanged at `dist/assets/br101-design-reference.png`, retaining its embedded Gemini Notebook mark. Its original assertions are not adopted as verified specifications. Concept direction and supplied presentation: Rajakokila-P. Implementation, additional explanations and tests: AI-assisted, as disclosed in the project declaration. The existing British-livery render remains an illustrative interpretation; it is not an engineering drawing or model-specific photograph.
+HTML, CSS and JavaScript
 
-Thirteen Node tests passed after integration. Chromium initially failed to launch on 5 November 2026. Subsequent Windows testing on 14 November 2026 completed successfully with nine browser checks passed and zero reported page errors. See the testing record for remaining checks.
+Duckett, J. (2011) HTML and CSS: Design and Build Websites. Indianapolis: Wiley.
+Meyer, E. and Weyl, E. (2017) CSS: The Definitive Guide. 4th edn. Sebastopol: O’Reilly.
+Haverbeke, M. (2024) Eloquent JavaScript. 4th edn. San Francisco: No Starch Press.
+
+Responsive design and layout
+
+Marcotte, E. (2011) Responsive Web Design. New York: A Book Apart.
+
+Usability and visual design
+
+Krug, S. (2014) Don’t Make Me Think, Revisited: A Common Sense Approach to Web Usability. 3rd edn. Berkeley: New Riders.
+Norman, D. (2013) The Design of Everyday Things. Revised and expanded edn. New York: Basic Books.
+Wathan, A. and Schoger, S. (2018) Refactoring UI. Self-published.
+
+Accessibility
+
+Pickering, H. (2016) Inclusive Design Patterns. Freiburg: Smashing Media.
+Kalbag, L. (2017) Accessibility for Everyone. New York: A Book Apart.
+
+Testing
+
+da Costa, L. (2021) Testing JavaScript Applications. Shelter Island: Manning.
+
+Referencing
+
+Pears, R. and Shields, G. (2022) Cite Them Right: The Essential Referencing Guide. 12th edn. London: Bloomsbury. This is the standard UK Harvard guide, and it also covers how to reference AI tools, which fits your project declaration.
 
 ## Supplied aircraft pictures — 5 November 2026
 

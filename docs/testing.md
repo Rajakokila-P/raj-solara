@@ -67,7 +67,7 @@ Record each defect found during testing: steps to reproduce, cause, change made,
 - User feedback from a target user.
 - Reflection on what the testing showed.
 
-## Final regression testing - 14 November 2026
+## Final regression testing 14 November 2026
 
 The final Raj Solara project was tested on Windows using Node.js and Playwright Chromium at http://127.0.0.1:4177.
 

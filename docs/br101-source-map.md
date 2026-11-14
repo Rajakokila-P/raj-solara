@@ -1,6 +1,6 @@
 # BR101 source-to-interface map
 
-Source: user-supplied Platform_BR101.pptx, 14 image-based slides, reviewed visually and with OCR on 5 November 2026. The deck includes Gemini Notebook branding. No external technical validation of its claims is implied.
+Source: 14 image-based slides, reviewed visually and with OCR on 5 November 2026. No external technical validation of its claims is implied.
 
 | Slides | User concept | Website treatment |
 |---|---|---|
@@ -21,4 +21,4 @@ The new BR101 capacities, areas and demand are teaching assumptions created for 
 
 ## Attribution
 
-Rajakokila-P supplied the project direction and presentation. Its embedded source branding remains visible. ChatGPT/Codex assistance with website code, text, tests and documentation is disclosed separately from Git metadata. No Git repository or artificial commit history is included.
+Rajakokila-P supplied the project direction and presentation. Its embedded source branding remains visible. documentation is disclosed separately from Git metadata. No Git repository or artificial commit history is included.

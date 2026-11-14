@@ -1,4 +1,4 @@
-# Testing record: Raj Solara
+﻿# Testing record: Raj Solara
 
 **Status:** draft for review. Replaces the earlier version of this file, which contained older statements that conflict with later results. Only checks listed under "Completed checks" have evidence. Everything else is pending and must not be marked as passed until it has been carried out and recorded.
 
@@ -18,9 +18,9 @@ Notes:
 
 ## Browser checks
 
-- Automated browser tests were attempted in the reviewing environment. Chromium failed to start there, so **no automated browser pass is claimed**.
+- Automated browser tests were attempted in the reviewing environment. Chromium failed to start there, so no automated browser pass was recorded on 5 November 2026; subsequent testing passed on 14 November 2026.
 - Selected actions were performed by the student in their connected Edge browser on 5 November 2026. See [browser-evidence.md](browser-evidence.md). Those results cover only the sampled actions listed there, and the tested version was the one before the Raj Solara rename.
-- The optional script `tests/browser-check.cjs` uses port 4174, while `scripts/serve.cjs` uses 4177. Align the two before running it. It has not been completed successfully.
+- The browser testing script and local server now both use port 4177. Nine automated browser checks passed on 14 November 2026.
 
 ## Manual checks (pending)
 
@@ -66,3 +66,49 @@ Record each defect found during testing: steps to reproduce, cause, change made,
 - Cross-browser testing.
 - User feedback from a target user.
 - Reflection on what the testing showed.
+
+## Final regression testing - 14 November 2026
+
+The final Raj Solara project was tested on Windows using Node.js and Playwright Chromium at http://127.0.0.1:4177.
+
+| Test | Result |
+| --- | --- |
+| Node.js unit tests | 13 passed, 0 failed |
+| Playwright browser tests | 9 passed |
+| Browser page errors | 0 |
+| ESLint | 0 errors, 0 warnings |
+| npm audit | 0 known vulnerabilities |
+| Browser test exit code | 0 |
+
+### Browser regression results
+
+1. Four aircraft and six system topics - Pass.
+2. Search, intersection and reset - Pass.
+3. Three-concept comparison maximum - Pass.
+4. Energy budget and validation - Pass.
+5. Cancellation and stale response protection - Pass.
+6. Simulated satellite failure and retry - Pass.
+7. Design save, reload, reopen and delete - Pass.
+8. Enquiry validation and demonstration success - Pass.
+9. Desktop and mobile horizontal overflow checks - Pass.
+
+### Evidence
+
+- [Unit tests](evidence/validation/windows-unit-tests.txt)
+- [Browser tests](evidence/validation/windows-browser-tests.txt)
+- [ESLint](evidence/validation/windows-eslint.txt)
+- [Dependency audit](evidence/validation/windows-audit.txt)
+- [Evidence index](evidence-index.csv)
+
+### Defects resolved
+
+- Browser testing port corrected from 4174 to 4177.
+- Playwright and Chromium installed successfully.
+- Local server connection restored.
+- README local address and deployment path corrected.
+
+### Limitations
+
+The earlier unsuccessful browser automation attempt is superseded by the successful Windows regression results recorded above.
+
+All 22 automated checks passed. Full accessibility compliance, cross-browser compatibility, the six-design storage limit, target-user feedback and final deployment equivalence still require verification. The 101 CSS validator warnings remain documented.

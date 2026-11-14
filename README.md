@@ -1,4 +1,4 @@
-# Raj Solara
+﻿# Raj Solara
 
 An interactive fictional solar-assisted aircraft concept studio, now featuring the user’s BR101 platform. Project owner: **Rajakokila-P**.
 
@@ -20,7 +20,7 @@ On Windows, extract the archive and open `raj-solara/start-windows.bat`. Alterna
 node scripts/serve.cjs
 ```
 
-Open http://127.0.0.1:4174. Keep the terminal running. If Node is not on your Windows PATH:
+Open http://127.0.0.1:4177. Keep the terminal running. If Node is not on your Windows PATH:
 
 ```powershell
 & "C:\Program Files\nodejs\node.exe" scripts/serve.cjs
@@ -70,7 +70,7 @@ Run `npm install` once, then `npm test` or `node --test tests/*.test.js`. See [t
 
 ## Deployment
 
-Publish the **contents of dist** at the root of a static host. Configure missing pages to use 404.html. For GitHub Pages, the source is GitHub Actions and the "Publish Raj Solara" workflow publishes the contents of dist; the repository root has no index.html. For a project URL such as /aether-solara/, update all four root-relative paths in 404.html and HOME in js/recovery.js to that exact base path. Test a nested missing URL, cancellation and timed recovery after publishing. Record the actual live URL, deployed commit/date and local/live equivalence in docs/testing.md.
+Publish the **contents of dist** at the root of a static host. Configure missing pages to use 404.html. For GitHub Pages, the source is GitHub Actions and the "Publish Raj Solara" workflow publishes the contents of dist; the repository root has no index.html. For a project URL such as /raj-solara/, update all four root-relative paths in 404.html and HOME in js/recovery.js to that exact base path. Test a nested missing URL, cancellation and timed recovery after publishing. Record the actual live URL, deployed commit/date and local/live equivalence in docs/testing.md.
 
 ## Git and ownership
 
@@ -94,7 +94,7 @@ For questions or problems, open an issue at https://github.com/Rajakokila-P/raj-
 ## Authors and acknowledgment
 
 - Concept direction and supplied BR101 presentation and pictures: Rajakokila-P.
-- Implementation, explanations and tests: Rajakokila-P. through the research in the project declaration.
+- Project concept and direction: Rajakokila-P. Implementation, documentation and test development received AI assistance. Final Windows regression tests were executed by Rajakokila-P.
 - The BR101 cover image and supplied pictures are the owner's supplied material. Their licence status is still being confirmed (see Licence).
 
 ## Licence
@@ -105,7 +105,7 @@ The MIT Licence does not apply to third-party or supplied material. This include
 
 ## Project status
 
-Working starting implementation, not a guaranteed grade. All pass and merit criteria must be met before distinction can be considered. Official W3C HTML/Jigsaw CSS validation, JS lint, real user feedback, personal reflection, browser/accessibility evidence and final deployment checks remain outstanding. See docs/design.md and docs/testing.md.
+Working starting implementation, not a guaranteed grade. All pass and merit criteria must be met before distinction can be considered. HTML validation, CSS validation, JavaScript lint and automated browser regression testing have been completed. CSS warnings, full accessibility review, real user feedback, personal reflection and final deployment verification remain outstanding. See docs/design.md and docs/testing.md.
 
 ## British aircraft imagery revision
 
@@ -129,7 +129,7 @@ BR101's 160 kWh capacity, 90 m² panel area and 30 kW default demand are **new i
 
 The presentation's cover image is included unchanged at `dist/assets/br101-design-reference.png`, retaining its embedded Gemini Notebook mark. Its original assertions are not adopted as verified specifications. Concept direction and supplied presentation: Rajakokila-P. Implementation, additional explanations and tests: AI-assisted, as disclosed in the project declaration. The existing British-livery render remains an illustrative interpretation; it is not an engineering drawing or model-specific photograph.
 
-Thirteen Node tests passed after integration. Browser automation was attempted but Chromium could not launch in the execution environment, so browser results are not claimed. See the testing record for remaining checks.
+Thirteen Node tests passed after integration. Chromium initially failed to launch on 5 November 2026. Subsequent Windows testing on 14 November 2026 completed successfully with nine browser checks passed and zero reported page errors. See the testing record for remaining checks.
 
 ## Supplied aircraft pictures — 5 November 2026
 
@@ -139,7 +139,7 @@ Source: four images supplied by Rajakokila-P in this conversation. New filenames
 
 ## Raj Solara branding and browser evidence
 
-The public name is now **Raj Solara**, including titles, navigation branding, footer, About, missing-page recovery, server message and downloaded brief. The internal storage key is retained for compatibility. See [browser evidence](docs/browser-evidence.md) for the executed Edge checks and screenshots. The renamed package still needs a final browser smoke test after installation.
+The public name is now **Raj Solara**, including titles, navigation branding, footer, About, missing-page recovery, server message and downloaded brief. The internal storage key is retained for compatibility. See [browser evidence](docs/browser-evidence.md) for the executed Edge checks and screenshots. The renamed package passed nine automated browser regression checks on 14 November 2026.
 
 Extract this archive into a new directory. Open the `raj-solara` folder in VS Code. Stop the old local server with Ctrl+C before starting this copy, or change both port references in scripts/serve.cjs if that port is occupied. Do not overwrite your personal changes without comparing them first.
 
@@ -150,3 +150,28 @@ A decorative three-line red, white and navy mark appears beside Raj Solara in th
 ## Code validation — 5 November 2026
 
 See [validation results and remaining warnings](docs/validation.md) for official HTML/CSS reports, ESLint configuration and reproducible commands. These results apply to the corrected local source; live deployment must be updated and rechecked.
+
+
+## Latest testing results - 14 November 2026
+
+| Verification | Result |
+| --- | --- |
+| Node.js unit tests | 13/13 passed |
+| Playwright browser tests | 9/9 passed |
+| Browser page errors | 0 |
+| ESLint | 0 errors, 0 warnings |
+| HTML validation | Three pages passed |
+| CSS validation | 0 errors, 101 warnings |
+| Dependency audit | 0 known vulnerabilities |
+
+### Testing evidence
+
+- [Complete testing record](docs/testing.md)
+- [Evidence index](docs/evidence-index.csv)
+- [Browser test results](docs/evidence/validation/windows-browser-tests.txt)
+- [Desktop screenshots](docs/evidence/desktop/)
+- [Responsive screenshots](docs/evidence/responsive/)
+- [Accessibility evidence](docs/evidence/accessibility/)
+- [Design storage evidence](docs/evidence/design-storage/)
+
+The 22 successful automated checks demonstrate the tested functionality. Full accessibility compliance, target-user feedback and final deployment verification remain outstanding.

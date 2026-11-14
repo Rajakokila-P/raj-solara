@@ -1,4 +1,4 @@
-# Raj Solara — validation evidence
+# Raj Solara  validation evidence
 
 Checked on 5 November 2026 against GitHub commit b99bbb9, with the local corrections described below. These corrections have not been pushed or deployed. Raw reports and SHA-256 source hashes are in [evidence/validation](evidence/validation/).
 

@@ -179,7 +179,31 @@ The 22 successful automated checks demonstrate the tested functionality. Full ac
 
 ## Responsive website views
 
-Screenshots extracted from screen recordings made on 14 November 2026. These show the implemented website at three recorded display sizes; they are not pre-development wireframes or physical-device certification. Screenshot extraction was assisted by ChatGPT.
+Screenshots extracted from screen recordings made on 14 November 2026. These show the implemented website at three recorded display sizes; they are not pre-development wireframes or physical-device certification. 
+
+<h2>Responsive Design</h2>
+
+<table>
+  <tr>
+    <th>Desktop View</th>
+    <th>Tablet View</th>
+    <th>Mobile View</th>
+  </tr>
+  <tr>
+    <td width="50%">
+      <img src="docs/evidence/responsive-views/desktop-homepage.png"
+           alt="Raj Solara desktop view" width="100%">
+    </td>
+    <td width="30%">
+      <img src="docs/evidence/responsive-views/tablet-homepage.png"
+           alt="Raj Solara tablet view" width="100%">
+    </td>
+    <td width="20%">
+      <img src="docs/evidence/responsive-views/mobile-homepage.png"
+           alt="Raj Solara mobile view" width="100%">
+    </td>
+  </tr>
+</table>
 
 ### Desktop view (992 × 622 recorded pixels)
 

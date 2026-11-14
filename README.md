@@ -175,3 +175,27 @@ See [validation results and remaining warnings](docs/validation.md) for official
 - [Design storage evidence](docs/evidence/design-storage/)
 
 The 22 successful automated checks demonstrate the tested functionality. Full accessibility compliance, target-user feedback and final deployment verification remain outstanding.
+
+
+## Responsive website views
+
+Screenshots extracted from screen recordings made on 14 November 2026. These show the implemented website at three recorded display sizes; they are not pre-development wireframes or physical-device certification. Screenshot extraction was assisted by ChatGPT.
+
+### Desktop view (992 × 622 recorded pixels)
+
+![Raj Solara desktop homepage](docs/evidence/responsive-views/desktop-homepage.png)
+
+![Raj Solara desktop aircraft catalogue](docs/evidence/responsive-views/desktop-catalogue.png)
+
+### Tablet view (650 × 868 recorded pixels)
+
+![Raj Solara tablet homepage](docs/evidence/responsive-views/tablet-homepage.png)
+
+![Raj Solara tablet aircraft catalogue](docs/evidence/responsive-views/tablet-catalogue.png)
+
+### Mobile view (390 × 858 recorded pixels)
+
+![Raj Solara mobile homepage](docs/evidence/responsive-views/mobile-homepage.png)
+
+![Raj Solara mobile aircraft catalogue](docs/evidence/responsive-views/mobile-catalogue.png)
+

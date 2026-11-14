@@ -19,7 +19,7 @@ Added ESLint configuration, a lint script and a dependency lockfile for reproduc
 
 Implementation and validation assistance: OpenAI Codex. Project concept and ownership: Rajakokila-P. This record does not claim independent student testing or understanding.
 
-## CSS warnings — retained, not hidden
+## CSS warnings  retained, not hidden
 
 The official Jigsaw report records 81 redefinition warnings, 12 no-color warnings and 8 no-background-color warnings. The stylesheet uses cascading brand overrides and responsive media rules. Transparent controls inherit colours from their surrounding sections. These patterns explain the warning categories; they do not independently prove accessible contrast. No CSS validation errors remain, but this is **not a warning-free result**. Full computed-colour, contrast, focus and mobile checks remain outstanding. The full warning messages and line references are saved.
 

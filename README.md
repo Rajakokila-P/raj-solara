@@ -113,7 +113,7 @@ A modern fictional aircraft render now replaces the hero and collection schemati
 
 Image: dist/assets/solara-british-aircraft.png, generated using the built-in OpenAI image tool. Prompt: premium photorealistic fictional solar-assisted autonomous aircraft above clouds, swept solar-panel wings, royal navy blue, pearl white and red livery, Union Jack tail, no airline logo or performance claims. The flag is a design motif, not an assertion of government or airline affiliation.
 
-## BR101 integration — 5 November 2026
+## BR101 integration  5 November 2026
 
 The supplied **Platform_BR101.pptx** is the concept source. BR101 is the flagship research design; Aurora, Stratos and Courier remain alternative studies. Compare up to three of the four designs. Existing saved-design keys remain compatible.
 
@@ -156,7 +156,7 @@ Referencing
 
 Pears, R. and Shields, G. (2022) Cite Them Right: The Essential Referencing Guide. 12th edn. London: Bloomsbury. This is the standard UK Harvard guide, and it also covers how to reference AI tools, which fits your project declaration.
 
-## Supplied aircraft pictures — 5 November 2026
+## Supplied aircraft pictures  5 November 2026
 
 The Pictures navigation link opens a responsive four-image gallery: the BR101 vision board, silver/cobalt BR202, deep-cobalt BR202 and pearl/slate BR303. Original image pixels are preserved. Each image has descriptive alternative text, a caption and a full-size link explicitly labelled as opening a new tab. The images are bundled locally and lazy-loaded. The BR101 caption qualifies the artwork's infinite-endurance statement as unverified.
 
@@ -168,16 +168,16 @@ The public name is now **Raj Solara**, including titles, navigation branding, fo
 
 Extract this archive into a new directory. Open the `raj-solara` folder in VS Code. Stop the old local server with Ctrl+C before starting this copy, or change both port references in scripts/serve.cjs if that port is occupied. Do not overwrite your personal changes without comparing them first.
 
-## British-colour brand symbol
+## British colour brand symbol
 
 A decorative three-line red, white and navy mark appears beside Raj Solara in the header and footer, inspired by the user-supplied British-flag light-trail reference. The white line has an outline for visibility. This is a colour motif, not a literal Union Jack. It uses inline SVG, requires no image download and is hidden from assistive technology because the adjacent name supplies the link text.
 
-## Code validation — 5 November 2026
+## Code validation 5 November 2026
 
 See [validation results and remaining warnings](docs/validation.md) for official HTML/CSS reports, ESLint configuration and reproducible commands. These results apply to the corrected local source; live deployment must be updated and rechecked.
 
 
-## Latest testing results - 14 November 2026
+## Latest testing results  14 November 2026
 
 | Verification | Result |
 | --- | --- |

@@ -61,7 +61,7 @@ Record each defect found during testing: steps to reproduce, cause, change made,
 ## Not yet done
 
 - Automated accessibility audit (for example axe).
-- Full keyboard and screen-reader pass.
+- Full keyboard and screen reader pass.
 - Contrast check of computed colours.
 - Cross-browser testing.
 - User feedback from a target user.

@@ -1,4 +1,4 @@
-# Browser evidence — 5 November 2026
+# Browser evidence 5 November 2026
 
 ## Scope
 

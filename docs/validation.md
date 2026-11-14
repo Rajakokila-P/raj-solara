@@ -17,7 +17,7 @@ The initial index HTML had two errors and three warnings. Each slider label cont
 
 Added ESLint configuration, a lint script and a dependency lockfile for reproducible checks. Browser modules use browser globals; Node scripts use Node globals. The Playwright test has explicit document and innerWidth globals because its callbacks run inside the browser. Initial lint findings were these five environment configuration findings; no JavaScript runtime logic was altered.
 
-Implementation and validation assistance: OpenAI Codex. Project concept and ownership: Rajakokila-P. This record does not claim independent student testing or understanding.
+Implementation and Project concept and ownership: Rajakokila-P. This record does not claim independent student testing or understanding.
 
 ## CSS warnings  retained, not hidden
 
@@ -47,7 +47,7 @@ curl -G https://jigsaw.w3.org/css-validator/validator --data-urlencode text@dist
 
 ## Install this update
 
-The update ZIP contains changed files and validation evidence only. Back up your project, then copy its contents into the existing raj-solara project folder, keeping the existing dist/assets and Git history. Review git diff before committing. Run the commands above and open the site to check the two energy sliders and technology buttons. These final markup changes have not been browser-tested in this validation run. No Git commit, push or deployment was performed by the assistant.
+The update ZIP contains changed files and validation evidence only. Back up your project, then copy its contents into the existing raj solara project folder, keeping the existing dist/assets and Git history. Review git diff before committing. Run the commands above and open the site to check the two energy sliders and technology buttons. These final markup changes have not been browser tested in this validation run. No Git commit, push or deployment was performed by the assistant.
 
 The optional tests/browser-check.cjs still targets port 4174 while scripts/serve.cjs uses 4177. That pre-existing mismatch is recorded here; the optional browser suite was not run or counted as passing in this task.
 

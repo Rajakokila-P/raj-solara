@@ -343,4 +343,4 @@ Acknowledgement is given to educational resources, browser validation tools and 
 - [Screenshot evidence index](docs/evidence-index.csv)
 - [Previous README retained for traceability](docs/README-previous-version.md)
 
-**Submission note:** this README is organised to match the lecturer's Memori-K example, but matching headings and inserting images alone does not demonstrate all Pass, Merit or Distinction criteria. Actual design-process evidence, target-user testing, individual contribution, Git history and published-site verification must be supplied truthfully.
+**Submission note:** this README is organized to match the lecturer's Dr. Ragav example, but matching headings and inserting images alone does not demonstrate all Pass, Merit or Distinction criteria. Actual design-process evidence, target-user testing, individual contribution, Git history and published-site verification must be supplied truthfully.

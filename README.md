@@ -1,7 +1,6 @@
 # Raj Solara — Interactive Front End Development
 
-**Project owner:** Rajakokila-P  
-**Qualification:** Level 5 Diploma in Web Application Development — Unit 2: Interactive Front End Development  
+**Project owner:** Rajakokila-P    
 **Project type:** Original fictional solar-assisted aircraft concept exploration website  
 **Live website (verify against the latest deployment):** [Raj Solara on GitHub Pages](https://rajakokila-p.github.io/raj-solara/)  
 **Source:** [GitHub repository](https://github.com/Rajakokila-P/raj-solara)
@@ -311,23 +310,22 @@ The website itself does not need paid services or an API key. If port 4177 is oc
 
 ---
 
-## 6. Credits
 
-### 6.1 Contents
+### 6 Contents
 
 **Project concept, direction and supplied BR101 reference material:** Rajakokila-P. The explanatory aircraft content and modelling assumptions describe fictional study concepts, not operational data. Background study sources recorded in the original README include Duckett (2011), Haverbeke (2024), Krug (2014), Norman (2013), Marcotte (2011) and other programming, usability and testing texts. The earlier full reference notes are preserved in [previous README](docs/README-previous-version.md); only cite specific works that were actually consulted for the submission.
 
-### 6.2 Media
+### 6.1 Media
 
 The repository contains supplied aircraft illustrations and a generated aircraft concept render under `dist/assets/`. The previous documentation identifies `solara-british-aircraft.png` as generated using OpenAI's image tool. Supplied BR101/BR202/BR303 material may have separate ownership restrictions. **Usage rights for the supplied and generated images have not been fully confirmed.** The repository MIT licence does not automatically cover those assets.
 
-### 6.3 Code
+### 6.2 Code
 
 The repository identifies Rajakokila-P as project owner. The previous documentation states that implementation, documentation and test development received AI assistance; this disclosure is preserved here to avoid an inaccurate claim of exclusive authorship. Before submission, distinguish work you wrote and can explain from externally derived code or assistance, with attribution as required by the course. JavaScript and CSS are in separate files; test sources are in `tests/`.
 
 **Code licence:** [MIT licence](LICENSE), subject to the third-party media exclusions described above.
 
-### 6.4 Acknowledgements
+### 6.3 Acknowledgements
 
 Acknowledgement is given to educational resources, browser validation tools and project feedback used during development. The course assessor should be able to inspect the genuine Git history, original research/design evidence and the student's own understanding. Do not claim unperformed interviews, wireframes or test results.
 
